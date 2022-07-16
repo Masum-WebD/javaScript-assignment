@@ -65,5 +65,9 @@ const totalOrdersAmount =orders.reduce((OrderTotalPrice, OrderTotal)=> OrderTota
 console.log('Total Orders Amount ',totalOrdersAmount)
 
 // Calculate total paid amount : 390
-const totalPaidAmount =orders.reduce((OrderTotalPrice, OrderTotal)=> OrderTotalPrice + OrderTotal.paid,0)
-console.log('Total Orders Amount ',totalPaidAmount)
+const totalPaidAmount =orders.reduce((paidTotalPrice, OrderTotal)=> paidTotalPrice + OrderTotal.paid,0)
+console.log('Total Paid Amount ',totalPaidAmount)
+
+//Calculate total due amount : 30
+const totalDueAmount =orders.reduce((dueTotalPrice, OrderTotal)=> dueTotalPrice + OrderTotal.Due,0)
+console.log('Total Due Amount ',totalDueAmount)
